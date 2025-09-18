@@ -1,4 +1,6 @@
-# 🧠 Proyecto: Análisis Semántico y Tabla de Símbolos en Compiladores
+# 🧠 Proyecto: 
+
+#Análisis Semántico y Tabla de Símbolos en Compiladores
 
 Estudiantes:
 
