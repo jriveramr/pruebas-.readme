@@ -80,8 +80,6 @@ Consultar símbolos al usarse Cada vez que se utiliza un identificador, el inté
 
 Manejo de múltiples ámbitos En lenguajes con estructuras anidadas (como funciones dentro de funciones o bloques condicionales), la tabla debe gestionar correctamente los distintos niveles de visibilidad. Esto se logra mediante estructuras jerárquicas, como pilas de tablas o árboles de ámbitos, que permiten resolver correctamente las referencias según el contexto.
 
----
-
 ### 🔗 Integración del Análisis Semántico con el Intérprete
 Una vez generado el árbol sintáctico abstracto (AST) por el análisis sintáctico, el intérprete utiliza esta estructura como entrada para realizar el análisis semántico. Cada nodo del AST representa una construcción del lenguaje (como una asignación, una operación, o una declaración), y es recorrido por el analizador semántico para validar su significado lógico.
 
