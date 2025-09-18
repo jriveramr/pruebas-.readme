@@ -58,7 +58,7 @@ La tabla de símbolos es una estructura de datos esencial en el diseño de compi
 
 Como señalan Aho, Lam, Sethi y Ullman (2014), “una función esencial de un compilador es registrar los nombres de variables utilizados en el programa fuente y recopilar información sobre diversos atributos de cada nombre”. Estos atributos incluyen el tipo de dato, el ámbito en el que puede usarse, el almacenamiento asignado, y en el caso de funciones, el número y tipo de argumentos, el método de paso (por valor o por referencia), y el tipo de retorno.
 
-###📦 Información Típica Almacenada
+### 📦 Información Típica Almacenada
 Cada entrada en la tabla de símbolos representa un identificador y contiene campos que describen sus características. Entre los datos más comunes que se almacenan están:
 
 Nombre del símbolo: El identificador textual (por ejemplo, x, suma, contador)
@@ -71,7 +71,7 @@ Valor (si aplica): En intérpretes, puede incluir el valor actual de una variabl
 
 Atributos adicionales: En funciones, se registra el número de parámetros, sus tipos, y el tipo de retorno
 
-###⚙️ Funciones Principales
+### ⚙️ Funciones Principales
 La tabla de símbolos cumple varias funciones clave durante el análisis semántico y la ejecución del programa:
 
 Registrar símbolos al declararse Cuando se declara una variable, función o constante, se crea una entrada en la tabla con sus atributos correspondientes.
@@ -82,10 +82,10 @@ Manejo de múltiples ámbitos En lenguajes con estructuras anidadas (como funcio
 
 ---
 
-###🔗 Integración del Análisis Semántico con el Intérprete
+### 🔗 Integración del Análisis Semántico con el Intérprete
 Una vez generado el árbol sintáctico abstracto (AST) por el análisis sintáctico, el intérprete utiliza esta estructura como entrada para realizar el análisis semántico. Cada nodo del AST representa una construcción del lenguaje (como una asignación, una operación, o una declaración), y es recorrido por el analizador semántico para validar su significado lógico.
 
-###🧠 Uso del AST en el Análisis Semántico
+### 🧠 Uso del AST en el Análisis Semántico
 El recorrido del AST permite aplicar reglas semánticas específicas a cada tipo de nodo. Por ejemplo:
 
 En una asignación, se verifica que la variable esté declarada y que el tipo del valor sea compatible.
@@ -94,7 +94,7 @@ En una operación aritmética, se comprueba que los operandos sean numéricos y 
 
 Durante este proceso, el analizador consulta la tabla de símbolos para obtener información sobre los identificadores involucrados.
 
-###⚠️ Manejo de Errores Semánticos
+### ⚠️ Manejo de Errores Semánticos
 Cuando se detecta una inconsistencia semántica, el intérprete debe:
 
 Reportar el error con un mensaje claro (por ejemplo, “Variable ‘x’ no declarada”).
@@ -105,7 +105,7 @@ Evitar la ejecución de la instrucción afectada para preservar la integridad de
 
 Este manejo de errores es crucial para ofrecer retroalimentación útil al usuario y facilitar la depuración.
 
-###🧪 Ejemplo de Implementación
+### 🧪 Ejemplo de Implementación
 Supongamos que el intérprete encuentra la instrucción: x = y + 2;
 
 Durante el análisis semántico:
@@ -122,7 +122,7 @@ Si y no está en la tabla de símbolos, se genera un error semántico y se detie
 ### 🏗️ Implementación de una Tabla de Símbolos
 La tabla de símbolos debe ser eficiente y flexible para soportar múltiples ámbitos y operaciones frecuentes durante la interpretación.
 
-###📦 Información que Almacena
+### 📦 Información que Almacena
 Cada símbolo registrado contiene:
 
 Nombre del identificador
@@ -135,7 +135,7 @@ Valor, si aplica (en el caso de variables o constantes)
 
 Otros atributos, como número de parámetros en funciones o tipo de retorno
 
-###🧰 Estructuras de Datos Típicas
+### 🧰 Estructuras de Datos Típicas
 Para implementar la tabla de símbolos, se utilizan estructuras como:
 
 Diccionarios (hash maps): permiten búsquedas rápidas por nombre.
@@ -151,7 +151,7 @@ consultar(nombre)                  // Busca un símbolo en el ámbito actual o s
 entrarÁmbito()                     // Crea una nueva tabla y la apila
 salirÁmbito()                      // Elimina la tabla del ámbito actual
 
-###📋 Ejemplo de Representación Simplificada
+### 📋 Ejemplo de Representación Simplificada
 Tabla Global:
  ├── a : int
  └── b : string
