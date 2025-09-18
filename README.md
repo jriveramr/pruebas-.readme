@@ -42,11 +42,15 @@ b = a + "hola";
 ### 5.2 Árbol sintáctico simplificado
 - Mostrar estructura jerárquica de declaraciones y asignaciones.
 
+![Árbol sintáctico de ejemplo](img/arbol_sintactico.png "Árbol sintáctico")
+
 ### 5.3 Tabla de símbolos
 | Nombre | Tipo   | Ámbito  | Valor |
 |--------|--------|---------|-------|
 | a      | int    | global  | 10    |
 | b      | string | global  | ""    |
+
+![Tabla de símbolos representada gráficamente](img/tabla_simbolos.png "Tabla de símbolos")
 
 ### 5.4 Verificación semántica
 - `a = 10;` → válido.
