@@ -29,7 +29,7 @@ La imagen a continuacion muestra la ejecucion exitosa del interprete
 ### Linea por linea
 -Se instancia la variable "a"
 
--Se le asigna a la variable "a", el resultado de la funcion DIGITALROOT que en este proyecto cumple como la operación matemática creada por el equipo. A continuacion se presenta la funcion en cuestion.
+-Se le asigna a la variable "a", el resultado de la funcion DigitalRoot que en este proyecto cumple como la operación matemática creada por el equipo. A continuacion se presenta la funcion en cuestion.
 
 #### DigitalRoot: Recibe un numero y suma sus digitos hasta que el resultado conste de una sola cifra.
 
@@ -51,7 +51,7 @@ La imagen a continuacion muestra la ejecucion exitosa del interprete
 
 ![lessthan](img/lessthan.png "lessthan")
 
-#### Estructura compuerta logica ^ :
+#### Estructura compuerta logica AND :
 
 ![logicaland](img/logicaland.png "logicaland")
 
