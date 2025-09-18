@@ -21,6 +21,46 @@ El objetivo principal del análisis semántico es validar restricciones de tipos
 En este documento se profundiza un poco mas en el análisis semántico dentro del intérprete construido, así como la implementación de la tabla de símbolos y su papel en la verificación lógica del programa.
 
 ---
+##  Implementación del interprete
+La imagen a continuacion muestra la ejecucion exitosa del interprete
+![Ejecucion de ejemplo](img/ejecucion_completa.png "Ejecucion de ejemplo")
+
+### Linea por linea
+-Se instancia la variable "a"
+-Se le asigna a la variable "a", el resultado de la funcion DIGITALROOT que en este proyecto cumple como la operación matemática creada por el equipo. A continuacion se presenta la funcion en cuestion.
+
+#### DigitalRoot: Recibe un numero y suma sus digitos hasta que el resultado conste de una sola cifra.
+![digitalroot](img/digitalroot.png "digitalroot")
+
+-Se imprime el valor de "a".
+-Se ingresa en la estructura condicional. Esta linea comprueba la validacion no solo de la estructura condiconal, sino tambien de las operaciones matemáticas lógicas implementadas.
+
+#### Estructura if-else :
+
+![ifelse](img/ifelse.png "ifelse")
+
+#### Estructura mayor que :
+
+![greaterthan](img/greaterthan.png "greaterthan")
+
+#### Estructura menor que :
+
+![lessthan](img/lessthan.png "lessthan")
+
+#### Estructura compuerta logica ^ :
+
+![logicaland](img/logicaland.png "logicaland")
+
+-Tras el bloque de la estructura condicional se tiene la instancia de otra variable "r".
+-Se almacena en la variable "r" el resultado de la funcion SIMULATEGAUSS explicada a continuacion.
+
+#### SIMULATEGAUSS: implementación de ASTNode que, al ejecutarse, genera un número aleatorio con distribución normal usando una media (mu) y una desviación estándar (sigma).
+
+![SIMULATEGAUSS](img/SIMULATEGAUSS.png "SIMULATEGAUSS")
+
+-Se imprime el valor de "r".
+
+---
 
 ## 📚 Marco Teórico
 
@@ -142,24 +182,12 @@ Pilas de tablas: cada nivel de ámbito (por ejemplo, una función o bloque) tien
 
 Esto permite manejar correctamente la visibilidad de los símbolos y evitar conflictos entre ámbitos.
 
-###🔧 Operaciones Básicas
+### 🔧 Operaciones Básicas
 Las operaciones más comunes en la tabla de símbolos incluyen:
 insertar(nombre, tipo, ámbito)     // Registra un nuevo símbolo
 consultar(nombre)                  // Busca un símbolo en el ámbito actual o superior
 entrarÁmbito()                     // Crea una nueva tabla y la apila
 salirÁmbito()                      // Elimina la tabla del ámbito actual
-
-### 📋 Ejemplo de Representación Simplificada
-Tabla Global:
- ├── a : int
- └── b : string
-
-Ámbito Local (dentro de una función):
- ├── x : float
- └── a : bool   // Sombra la variable 'a' del ámbito global
-
-
-![Ejecucion de ejemplo](img/ejecucion_completa.png "Ejecucion de ejemplo")
 
 ---
 
