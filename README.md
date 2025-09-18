@@ -6,6 +6,7 @@ Rivera Mora Jose Ignacio - 2022227827
 
 Curso:
 Compiladores e interpretes.
+
 ---
 
 ## 📌 Introducción
