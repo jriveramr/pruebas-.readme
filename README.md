@@ -6,6 +6,9 @@ como continuación natural de los pasos vistos en análisis léxico y sintáctic
 ---
 
 ## 📌 Introducción
+- Contexto: análisis léxico y sintáctico completados
+- Necesidad del análisis semántico
+- Objetivo de este paso
 - Repaso: análisis léxico y sintáctico como etapas previas.
 - Limitaciones: el árbol sintáctico no garantiza que el programa sea válido lógicamente.
 - Importancia: el análisis semántico permite validar **restricciones de tipos, declaraciones y ámbitos**.
@@ -15,6 +18,13 @@ como continuación natural de los pasos vistos en análisis léxico y sintáctic
 ## 📚 Marco Teórico
 
 ### 🔍 Análisis Semántico
+   - Definición de análisis semántico
+   - Funciones del análisis semántico
+     * Verificación de tipos
+     * Declaración y uso de variables
+     * Control de ámbitos
+     * Otras comprobaciones semánticas
+   - Definición y propósito de la tabla de símbolos
 - **Definición:** etapa que valida que las construcciones sintácticas tengan sentido lógico.  
 - **Objetivos principales:**
   - Verificación de tipos en expresiones.
@@ -47,7 +57,19 @@ como continuación natural de los pasos vistos en análisis léxico y sintáctic
 
 ---
 
+ Integración con el intérprete
+   - Cómo se realiza el análisis semántico usando el AST
+   - Manejo de errores semánticos
+   - Ejemplo de implementación
+
+
+
 ## 🏗️ Implementación de una Tabla de Símbolos
+- Qué información almacena
+   - Estructuras de datos típicas (tablas hash, árboles, etc.)
+   - Gestión de ámbitos (pila de tablas de símbolos)
+   - Ejemplo práctico con pseudocódigo
+
 - **Estructuras de datos comunes:**
   - Diccionarios (*hash maps*).  
   - Pilas de tablas (para manejar bloques y funciones).  
@@ -95,6 +117,8 @@ Estructura jerárquica de declaraciones y asignaciones.
 ---
 
 ## 📝 Conclusión
+  - Cómo el análisis semántico prepara para la generación de código
+   - Relación con la fase de ejecución en el intérprete
 - El análisis semántico garantiza que el programa sea **lógicamente válido**.  
 - La tabla de símbolos funciona como la **memoria del compilador** durante la verificación.  
 - Ambos elementos preparan el terreno para la **generación de código**.  
