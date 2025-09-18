@@ -34,7 +34,7 @@ Por su parte, la tabla de símbolos es una estructura de datos fundamental que a
 
 En conjunto, el análisis semántico y la tabla de símbolos permiten que el compilador actúe como un intérprete lógico del código fuente, asegurando que cada instrucción tenga sentido dentro del contexto del lenguaje y evitando errores que podrían pasar desapercibidos en fases anteriores.
 
-## ⚙️ Funciones del Análisis Semántico
+### ⚙️ Funciones del Análisis Semántico
 1. ✅ **Verificación de tipos** → asegura compatibilidad de operaciones.  
 2. ✅ **Control de declaración y uso de variables** → evita identificadores desconocidos.  
 3. ✅ **Manejo de ámbitos** → distingue variables globales y locales.  
@@ -76,12 +76,13 @@ Registrar símbolos al declararse Cuando se declara una variable, función o con
 Consultar símbolos al usarse Cada vez que se utiliza un identificador, el intérprete consulta la tabla para verificar su existencia, tipo y otros atributos necesarios para validar la operación.
 
 Manejo de múltiples ámbitos En lenguajes con estructuras anidadas (como funciones dentro de funciones o bloques condicionales), la tabla debe gestionar correctamente los distintos niveles de visibilidad. Esto se logra mediante estructuras jerárquicas, como pilas de tablas o árboles de ámbitos, que permiten resolver correctamente las referencias según el contexto.
+
 ---
 
-🔗 Integración del Análisis Semántico con el Intérprete
+###🔗 Integración del Análisis Semántico con el Intérprete
 Una vez generado el árbol sintáctico abstracto (AST) por el análisis sintáctico, el intérprete utiliza esta estructura como entrada para realizar el análisis semántico. Cada nodo del AST representa una construcción del lenguaje (como una asignación, una operación, o una declaración), y es recorrido por el analizador semántico para validar su significado lógico.
 
-🧠 Uso del AST en el Análisis Semántico
+###🧠 Uso del AST en el Análisis Semántico
 El recorrido del AST permite aplicar reglas semánticas específicas a cada tipo de nodo. Por ejemplo:
 
 En una asignación, se verifica que la variable esté declarada y que el tipo del valor sea compatible.
@@ -90,7 +91,7 @@ En una operación aritmética, se comprueba que los operandos sean numéricos y 
 
 Durante este proceso, el analizador consulta la tabla de símbolos para obtener información sobre los identificadores involucrados.
 
-⚠️ Manejo de Errores Semánticos
+###⚠️ Manejo de Errores Semánticos
 Cuando se detecta una inconsistencia semántica, el intérprete debe:
 
 Reportar el error con un mensaje claro (por ejemplo, “Variable ‘x’ no declarada”).
@@ -101,7 +102,7 @@ Evitar la ejecución de la instrucción afectada para preservar la integridad de
 
 Este manejo de errores es crucial para ofrecer retroalimentación útil al usuario y facilitar la depuración.
 
-🧪 Ejemplo de Implementación
+###🧪 Ejemplo de Implementación
 Supongamos que el intérprete encuentra la instrucción: x = y + 2;
 
 Durante el análisis semántico:
@@ -115,10 +116,10 @@ Se valida que x esté declarada y que pueda recibir el resultado de la operació
 Si y no está en la tabla de símbolos, se genera un error semántico y se detiene la ejecución de esa línea.
 
 
-## 🏗️ Implementación de una Tabla de Símbolos
+### 🏗️ Implementación de una Tabla de Símbolos
 La tabla de símbolos debe ser eficiente y flexible para soportar múltiples ámbitos y operaciones frecuentes durante la interpretación.
 
-📦 Información que Almacena
+###📦 Información que Almacena
 Cada símbolo registrado contiene:
 
 Nombre del identificador
@@ -131,7 +132,7 @@ Valor, si aplica (en el caso de variables o constantes)
 
 Otros atributos, como número de parámetros en funciones o tipo de retorno
 
-🧰 Estructuras de Datos Típicas
+###🧰 Estructuras de Datos Típicas
 Para implementar la tabla de símbolos, se utilizan estructuras como:
 
 Diccionarios (hash maps): permiten búsquedas rápidas por nombre.
@@ -140,14 +141,14 @@ Pilas de tablas: cada nivel de ámbito (por ejemplo, una función o bloque) tien
 
 Esto permite manejar correctamente la visibilidad de los símbolos y evitar conflictos entre ámbitos.
 
-🔧 Operaciones Básicas
+###🔧 Operaciones Básicas
 Las operaciones más comunes en la tabla de símbolos incluyen:
 insertar(nombre, tipo, ámbito)     // Registra un nuevo símbolo
 consultar(nombre)                  // Busca un símbolo en el ámbito actual o superior
 entrarÁmbito()                     // Crea una nueva tabla y la apila
 salirÁmbito()                      // Elimina la tabla del ámbito actual
 
-📋 Ejemplo de Representación Simplificada
+###📋 Ejemplo de Representación Simplificada
 Tabla Global:
  ├── a : int
  └── b : string
