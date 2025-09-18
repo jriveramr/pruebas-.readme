@@ -87,9 +87,6 @@ Estructura jerárquica de declaraciones y asignaciones.
 | b      | string | global  | ""    |
 
 ![Tabla de símbolos representada gráficamente](img/tabla_simbolos.png "Tabla de símbolos")
-<p align="center">
-  <img src="img/arbol_sintactico.png" alt="Árbol Sintáctico" width="400"/>
-</p>
 
 ### ✅ Verificación Semántica
 - `a = 10;` → **válido**.  
