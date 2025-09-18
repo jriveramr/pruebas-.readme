@@ -16,6 +16,7 @@ Aquí surge la necesidad del análisis semántico, una fase esencial que permite
 El objetivo principal del análisis semántico es validar restricciones de tipos, declaraciones y ámbitos, asegurando que cada operación, asignación o referencia se realice de forma coherente. Esta etapa permite detectar errores que no pueden ser identificados por el análisis sintáctico, como el uso de variables no declaradas, incompatibilidades de tipo en expresiones, o llamadas a funciones con un número incorrecto de argumentos.
 
 En este documento se profundiza un poco mas en el análisis semántico dentro del intérprete construido, así como la implementación de la tabla de símbolos y su papel en la verificación lógica del programa.
+
 ---
 
 ## 📚 Marco Teórico
