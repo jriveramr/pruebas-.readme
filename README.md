@@ -189,14 +189,14 @@ Esto permite manejar correctamente la visibilidad de los símbolos y evitar conf
 
 ### 🔧 Operaciones Básicas
 Las operaciones más comunes en la tabla de símbolos incluyen:
-insertar(nombre, tipo, ámbito)     // Registra un nuevo símbolo
-consultar(nombre)                  // Busca un símbolo en el ámbito actual o superior
-entrarÁmbito()                     // Crea una nueva tabla y la apila
-salirÁmbito()                      // Elimina la tabla del ámbito actual
+#### insertar(nombre, tipo, ámbito): Registra un nuevo símbolo
+#### consultar(nombre): Busca un símbolo en el ámbito actual o superior
+#### entrarÁmbito(): Crea una nueva tabla y la apila
+#### salirÁmbito(): Elimina la tabla del ámbito actual
 
 ---
 
-## 📝 Conclusión
+## 📝 Conclusiones
 La implementación de un intérprete utilizando ANTLR v4 y Eclipse, guiada por los principios expuestos en la serie de videos del profesor Jaime A. Pavlich-Mariscal, permitió recorrer de forma práctica y estructurada las etapas fundamentales del procesamiento de lenguajes: análisis léxico, sintáctico y semántico.
 
 Tras completar el análisis léxico y sintáctico, se evidenció la necesidad de incorporar un análisis semántico que validara la coherencia lógica del programa. Esta etapa resultó esencial para detectar errores que no pueden ser identificados por la estructura gramatical, como el uso de variables no declaradas, incompatibilidades de tipo o referencias fuera de ámbito.
