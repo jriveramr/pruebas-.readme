@@ -23,16 +23,20 @@ En este documento se profundiza un poco mas en el análisis semántico dentro de
 ---
 ##  Implementación del interprete
 La imagen a continuacion muestra la ejecucion exitosa del interprete
+
 ![Ejecucion de ejemplo](img/ejecucion_completa.png "Ejecucion de ejemplo")
 
 ### Linea por linea
 -Se instancia la variable "a"
+
 -Se le asigna a la variable "a", el resultado de la funcion DIGITALROOT que en este proyecto cumple como la operación matemática creada por el equipo. A continuacion se presenta la funcion en cuestion.
 
 #### DigitalRoot: Recibe un numero y suma sus digitos hasta que el resultado conste de una sola cifra.
+
 ![digitalroot](img/digitalroot.png "digitalroot")
 
 -Se imprime el valor de "a".
+
 -Se ingresa en la estructura condicional. Esta linea comprueba la validacion no solo de la estructura condiconal, sino tambien de las operaciones matemáticas lógicas implementadas.
 
 #### Estructura if-else :
@@ -52,6 +56,7 @@ La imagen a continuacion muestra la ejecucion exitosa del interprete
 ![logicaland](img/logicaland.png "logicaland")
 
 -Tras el bloque de la estructura condicional se tiene la instancia de otra variable "r".
+
 -Se almacena en la variable "r" el resultado de la funcion SIMULATEGAUSS explicada a continuacion.
 
 #### SIMULATEGAUSS: implementación de ASTNode que, al ejecutarse, genera un número aleatorio con distribución normal usando una media (mu) y una desviación estándar (sigma).
